@@ -26,7 +26,7 @@
     (salient . ,(face-foreground 'font-lock-keyword-face nil t))
     (strong . ,(face-foreground 'default nil t))
     (popout . ,(face-foreground 'font-lock-string-face nil t))
-    (subtle . ,(face-background 'mode-line-inactive nil t))x
+    (subtle . ,(face-background 'mode-line-inactive nil t))
     (faded . ,(face-foreground 'shadow nil t))))
 
 (defun aurora-base-colors--get (name)

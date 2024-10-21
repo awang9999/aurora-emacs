@@ -55,44 +55,44 @@ information and this can be made by setting a very light
 background color that is barely perceptible."
   :group 'aurora)
 
-(defface aurora-face-header-default nil
-  "Default face for ther header line."
+(defface aurora-face-modeline-default nil
+  "Default face for ther modeline line."
   :group 'aurora)
 
-(defface aurora-face-header-critical nil
-  "Critical face for ther header line."
+(defface aurora-face-modeline-critical nil
+  "Critical face for ther modeline line."
   :group 'aurora)
 
-(defface aurora-face-header-popout nil
-  "Popout face for ther header line."
+(defface aurora-face-modeline-popout nil
+  "Popout face for ther modeline line."
   :group 'aurora)
 
-(defface aurora-face-header-strong nil
-  "Strong face for ther header line."
+(defface aurora-face-modeline-strong nil
+  "Strong face for ther modeline line."
   :group 'aurora)
 
-(defface aurora-face-header-salient nil
-  "Salient face for ther header line."
+(defface aurora-face-modeline-salient nil
+  "Salient face for ther modeline line."
   :group 'aurora)
 
-(defface aurora-face-header-faded nil
-  "Faded face for ther header line."
+(defface aurora-face-modeline-faded nil
+  "Faded face for ther modeline line."
   :group 'aurora)
 
-(defface aurora-face-header-subtle nil
-  "Subtle face for ther header line."
+(defface aurora-face-modeline-subtle nil
+  "Subtle face for ther modeline line."
   :group 'aurora)
 
-(defface aurora-face-header-highlight nil
-  "Highlight face for ther header line."
+(defface aurora-face-modeline-highlight nil
+  "Highlight face for ther modeline line."
   :group 'aurora)
 
-(defface aurora-face-header-separator nil
-  "Face for separating item in the header line (internal use)"
+(defface aurora-face-modeline-separator nil
+  "Face for separating item in the modeline line (internal use)"
   :group 'aurora)
 
-(defface aurora-face-header-filler nil
-  "Face compsenting spaces in the header line (internal use) "
+(defface aurora-face-modeline-filler nil
+  "Face compsenting spaces in the modeline line (internal use) "
   :group 'aurora)
 
 (defface aurora-face-tag-default nil
@@ -166,7 +166,7 @@ background color that is barely perceptible."
   (set-face-attribute 'aurora-face-subtle nil
                       :background aurora-color-subtle)
 
-  (set-face-attribute 'aurora-face-header-default nil
+  (set-face-attribute 'aurora-face-modeline-default nil
                       :foreground aurora-color-foreground
                       :background aurora-color-subtle
                       :box `(:line-width 1
@@ -185,7 +185,7 @@ background color that is barely perceptible."
                                          :color ,aurora-color-foreground
                                          :style nil))
 
-  (set-face-attribute 'aurora-face-header-strong nil
+  (set-face-attribute 'aurora-face-modeline-strong nil
                       :foreground aurora-color-strong
                       :background aurora-color-subtle
                       :inherit 'aurora-face-strong
@@ -205,7 +205,7 @@ background color that is barely perceptible."
                                          :color ,aurora-color-strong
                                          :style nil))
 
-  (set-face-attribute 'aurora-face-header-salient nil
+  (set-face-attribute 'aurora-face-modeline-salient nil
                       :foreground aurora-color-background
                       :background aurora-color-salient
                       :box `(:line-width 1
@@ -224,7 +224,7 @@ background color that is barely perceptible."
                                          :color ,aurora-color-salient
                                          :style nil))
 
-  (set-face-attribute 'aurora-face-header-popout nil
+  (set-face-attribute 'aurora-face-modeline-popout nil
                       :foreground aurora-color-background
                       :background aurora-color-popout
                       :box `(:line-width 1
@@ -243,7 +243,7 @@ background color that is barely perceptible."
                                          :color ,aurora-color-popout
                                          :style nil))
 
-  (set-face-attribute 'aurora-face-header-faded nil
+  (set-face-attribute 'aurora-face-modeline-faded nil
                       :foreground aurora-color-background
                       :background aurora-color-faded
                       :box `(:line-width 1
@@ -262,9 +262,9 @@ background color that is barely perceptible."
                                          :color ,aurora-color-faded
                                          :style nil))
 
-  (set-face-attribute 'aurora-face-header-subtle nil)
+  (set-face-attribute 'aurora-face-modeline-subtle nil)
 
-  (set-face-attribute 'aurora-face-header-critical nil
+  (set-face-attribute 'aurora-face-modeline-critical nil
                       :foreground aurora-color-background
                       :background aurora-color-critical
                       :box `(:line-width 1
@@ -282,14 +282,14 @@ background color that is barely perceptible."
                                          :color ,aurora-color-critical
                                          :style nil))
 
-  (set-face-attribute 'aurora-face-header-separator nil
+  (set-face-attribute 'aurora-face-modeline-separator nil
                       :inherit 'aurora-face-default
                       :height 0.1)
-  (set-face-attribute 'aurora-face-header-filler nil
-                      :inherit 'aurora-face-header-default
+  (set-face-attribute 'aurora-face-modeline-filler nil
+                      :inherit 'aurora-face-modeline-default
                       :height 0.1)
-  (set-face-attribute 'aurora-face-header-highlight nil
-                      :inherit 'aurora-face-header-faded
+  (set-face-attribute 'aurora-face-modeline-highlight nil
+                      :inherit 'aurora-face-modeline-faded
                       :box nil))
 
 (provide 'aurora-faces)

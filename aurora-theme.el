@@ -43,7 +43,7 @@ Defaults to nil."
   (set-face-attribute 'default nil
                       :foreground (face-foreground 'default)
                       :background (face-background 'default)
-                      :weight     'light
+                      :weight     'regular
                       :family     (face-attribute 'aurora-face-default :family)
                       :height     (face-attribute 'aurora-face-default :height))
 
@@ -122,27 +122,23 @@ Defaults to nil."
 (defun aurora-theme--mode-line ()
   "Derive mode-line and header-line faces from aurora-faces."
   (set-face-attribute 'mode-line nil
-                      :height 0.1
+                      :height 1.0
                       :foreground (if (display-graphic-p)
-                                      (face-background 'aurora-face-default)
+                                    (face-foreground 'aurora-face-default)
                                     (face-foreground 'aurora-face-default))
-                      :background (face-background 'aurora-face-default)
-                      :underline  (if (display-graphic-p)
-                                      (face-background 'aurora-face-subtle)
-                                    t)
+                      :background (face-background 'aurora-face-subtle)
+                      :underline nil
                       :overline nil
-                      :box nil)
+                      :box nil
+                      )
   (set-face-attribute 'mode-line-inactive nil
-                      :height 0.1
+                      :height 1.0
                       :foreground (if (display-graphic-p)
-                                      (face-background 'aurora-face-default)
+                                    (face-foreground 'aurora-face-default)
                                     (face-foreground 'aurora-face-default))
                       :background (face-background 'aurora-face-default)
-                      :underline (if (display-graphic-p)
-                                     (face-background 'aurora-face-subtle)
-                                   t)
+                      :underline nil
                       :overline nil
-                      :inherit nil
                       :box nil)
   
   ;;(when (display-graphic-p)

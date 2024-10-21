@@ -15,9 +15,12 @@
 (require 'aurora-faces)
 (require 'aurora-theme)
 (require 'aurora-theme-dark)
+(require 'aurora-theme-light)
 
-(aurora-theme-set-dark)
+(aurora-theme-set-light)
 (call-interactively 'aurora-refresh-theme)
+(call-interactively 'aurora-refresh-theme)
+
 
 ;; Aurora package settings (mandatory)
 (require 'aurora-packages)
@@ -28,8 +31,8 @@
 ;; Aurora default settings (optional)
 (require 'aurora-defaults)
 
-;; Aurora colors (optional)
-(require 'aurora-colors)
+;; Aurora header & mode lines (optional)
+(require 'aurora-modeline)
 
 ;; Welcome message (optional)
 (let ((inhibit-message t))

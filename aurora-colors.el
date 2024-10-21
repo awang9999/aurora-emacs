@@ -1,3 +1,5 @@
+(use-package rainbow-mode)
+
 ;; See https://yeun.github.io/open-color/
 (defconst open-colors
   '(("gray"   . (list "#F8F9FA" "#F1F3F5" "#E9ECEF" "#DEE2E6" "#CED4DA"
@@ -74,7 +76,7 @@
     ("grey"        . (list "#FAFAFA" "#F5F5F5" "#EEEEEE" "#E0E0E0" "#BDBDBD"
                            "#9E9E9E" "#757575" "#616161" "#424242" "#212121"))
     ("blue-grey"   . (list "#ECEFF1" "#CFD8DC" "#B0BEC5" "#90A4AE" "#78909C"
-                           "#607D8B" "#546E7A" "#455A64" "#37474F" "#263238"))))
+                           "#607D8B" "#546E7A" "#455A64" "#37474F" "#263238")))) 
 
 (defun material-color (color)
   (interactive)
@@ -86,19 +88,27 @@
 
 ;; See https://www.nordtheme.com/
 (defconst nord-colors
-  '( ("polar-night" . (list "#2E3440" "#3B4252" "#434C5E" "#4C566A"))
+  '( ("polar-night" . (list "#2E3440" "#3B4252" "#434C5E" "#4C566A" "#677691"))
      ("snow-storm"  . (list "#D8DEE9" "#E5E9F0" "#ECEFF4"))
      ("frost"       . (list "#8FBCBB" "#88C0D0" "#81A1C1" "#5E81AC"))
      ("aurora"      . (list "#BF616A" "#D08770" "#EBCB8B" "#A3BE8C" "#B48EAD"))
      ("nord"        . (list "#2E3440" "#3B4252" "#434C5E" "#4C566A"
 			                "#D8DEE9" "#E5E9F0" "#ECEFF4" "#8FBCBB"
 			                "#88C0D0" "#81A1C1" "#5E81AC" "#BF616A"
-			                "#D08770" "#EBCB8B" "#A3BE8C" "#B48EAD"))))
+			                "#D08770" "#EBCB8B" "#A3BE8C" "#B48EAD"
+                            "#677691")))) 
 
 (defun nord-color (color)
   (interactive)
   (let ((hue   (substring color 0 -2))
         (level (string-to-number (substring color -1))))
     (nth (+ 1 level) (cdr (assoc hue nord-colors)))))
+
+(defconst basic-colors
+  '(("white" . "#FFFFFF")
+    ("black" . "#000000")))
+
+(defun basic-color (color)
+  (cdr (assoc color basic-colors)))
 
 (provide 'aurora-colors)
