@@ -7,7 +7,7 @@
   (setq frame-background-mode    'light)
   (setq aurora-color-foreground (material-color "blue-grey-8"))   ;; Blue Grey   / L800
   (setq aurora-color-background (material-color "blue-grey-0"))   ;; Blue Grey   / L50
-  (setq aurora-color-highlight  (material-color "amber-1"))       ;; Amber       / L100
+  (setq aurora-color-highlight  (material-color "amber-0"))       ;; Amber       / L50
   (setq aurora-color-critical   (material-color "amber-9"))       ;; Amber       / L900
   (setq aurora-color-salient    (material-color "deep-purple-5")) ;; Deep Purple / L500
   (setq aurora-color-strong     (basic-color "black"))            ;; Black

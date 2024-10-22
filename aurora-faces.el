@@ -55,6 +55,11 @@ information and this can be made by setting a very light
 background color that is barely perceptible."
   :group 'aurora)
 
+(defface aurora-face-highlight nil
+  "Highlight face is used for the marked region and highlighted
+text such as links. It can be made very light but still perceptible"
+  :group 'aurora)
+
 (defface aurora-face-modeline-default nil
   "Default face for ther modeline line."
   :group 'aurora)
@@ -165,7 +170,10 @@ background color that is barely perceptible."
 
   (set-face-attribute 'aurora-face-subtle nil
                       :background aurora-color-subtle)
-
+  
+  (set-face-attribute 'aurora-face-highlight nil
+                      :background aurora-color-highlight)
+  
   (set-face-attribute 'aurora-face-modeline-default nil
                       :foreground aurora-color-foreground
                       :background aurora-color-subtle

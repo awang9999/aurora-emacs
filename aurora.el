@@ -17,7 +17,7 @@
 (require 'aurora-theme-dark)
 (require 'aurora-theme-light)
 
-(aurora-theme-set-light)
+(aurora-theme-set-dark)
 (call-interactively 'aurora-refresh-theme)
 (call-interactively 'aurora-refresh-theme)
 

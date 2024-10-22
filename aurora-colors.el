@@ -91,12 +91,7 @@
   '( ("polar-night" . (list "#2E3440" "#3B4252" "#434C5E" "#4C566A" "#677691"))
      ("snow-storm"  . (list "#D8DEE9" "#E5E9F0" "#ECEFF4"))
      ("frost"       . (list "#8FBCBB" "#88C0D0" "#81A1C1" "#5E81AC"))
-     ("aurora"      . (list "#BF616A" "#D08770" "#EBCB8B" "#A3BE8C" "#B48EAD"))
-     ("nord"        . (list "#2E3440" "#3B4252" "#434C5E" "#4C566A"
-			                "#D8DEE9" "#E5E9F0" "#ECEFF4" "#8FBCBB"
-			                "#88C0D0" "#81A1C1" "#5E81AC" "#BF616A"
-			                "#D08770" "#EBCB8B" "#A3BE8C" "#B48EAD"
-                            "#677691")))) 
+     ("aurora"      . (list "#BF616A" "#D08770" "#EBCB8B" "#A3BE8C" "#B48EAD"))))
 
 (defun nord-color (color)
   (interactive)
