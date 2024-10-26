@@ -8,8 +8,12 @@
 (setq EMACS_DIR "~/.emacs.d/")
 
 ;; Path to Aurora emacs modules (mandatory)
-(add-to-list 'load-path "/home/zander/projects/aurora-emacs")
-(add-to-list 'load-path ".")
+(defun add-to-load-path-recursively (dir)
+  "Add DIR and all its subdirectories to 'load-path'."
+  (let ((default-directory (file-name-as-directory dir)))
+    (normal-top-level-add-subdirs-to-load-path)))
+
+(add-to-load-path-recursively "/home/zander/projects/aurora-emacs")
 
 ;; Aurora theme
 (require 'aurora-faces)
@@ -20,7 +24,6 @@
 (aurora-theme-set-dark)
 (call-interactively 'aurora-refresh-theme)
 (call-interactively 'aurora-refresh-theme)
-
 
 ;; Aurora package settings (mandatory)
 (require 'aurora-packages)
@@ -33,6 +36,9 @@
 
 ;; Aurora header & mode lines (optional)
 (require 'aurora-modeline)
+
+;; Aurora configuration (optional)
+(require 'aurora-custom)
 
 ;; Welcome message (optional)
 (let ((inhibit-message t))
