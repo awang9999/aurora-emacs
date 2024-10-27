@@ -17,4 +17,8 @@
 ;; Corfu in-buffer completion                          | https://github.com/minad/corfu
 (require 'aurora-corfu)
 
+;; Magit - it's magitcal!                              | https://github.com/magit/magit
+(require 'aurora-magit)
+
+
 (provide 'aurora-custom)
