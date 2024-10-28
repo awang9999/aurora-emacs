@@ -1,4 +1,4 @@
-(defcustom aurora-font-family-monospaced "FiraCode"
+(defcustom aurora-font-family-monospaced "FiraCode Nerd Font"
   "Name of the font-family to use for aurora.
 Defaults to Fira Code. Customizing this might lead to conflicts
 if the family does not have sufficient bold/light etc faces."

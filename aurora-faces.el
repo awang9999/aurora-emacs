@@ -124,6 +124,30 @@ text such as links. It can be made very light but still perceptible"
   "Critical face for tags"
   :group 'aurora)
 
+(defface aurora-face-tab-default nil
+  "Default face for tabs"
+  :group 'aurora)
+
+(defface aurora-face-tab-active nil
+  "Default face for tabs"
+  :group 'aurora)
+
+(defface aurora-face-tab-inactive nil
+  "Default face for tabs"
+  :group 'aurora)
+
+(defface aurora-face-tab-active-modified nil
+  "Default face for tabs"
+  :group 'aurora)
+
+(defface aurora-face-tab-inactive-modified nil
+  "Default face for tabs"
+  :group 'aurora)
+
+(defface aurora-face-tab-active-bar-face  nil
+  "Default face for tabs"
+  :group 'aurora)
+
 (defun aurora-what-faces (pos)
   "Get the font faces at POS."
   (interactive "d")
@@ -298,6 +322,20 @@ text such as links. It can be made very light but still perceptible"
                       :height 0.1)
   (set-face-attribute 'aurora-face-modeline-highlight nil
                       :inherit 'aurora-face-modeline-faded
-                      :box nil))
+                      :box nil)
+
+  (set-face-attribute 'aurora-face-tab-default nil
+                      :inherit 'aurora-face-subtle)
+  (set-face-attribute 'aurora-face-tab-active nil
+                      :inherit 'aurora-face-strong)
+  (set-face-attribute 'aurora-face-tab-active-modified nil
+                      :inherit 'aurora-face-popout)
+  (set-face-attribute 'aurora-face-tab-inactive nil
+                      :inherit 'aurora-face-faded)
+  (set-face-attribute 'aurora-face-tab-inactive-modified nil
+                      :inherit 'aurora-face-popout)
+  (set-face-attribute 'aurora-face-tab-active-bar-face nil
+                      :inherit 'aurora-face-salient)
+  )
 
 (provide 'aurora-faces)

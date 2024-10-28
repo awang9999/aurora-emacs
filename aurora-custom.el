@@ -20,5 +20,11 @@
 ;; Magit - it's magitcal!                              | https://github.com/magit/magit
 (require 'aurora-magit)
 
+;; Nerd Icons and Kind Icon                            | look it up
+(require 'aurora-icons)
+
+;; Centaur Tabs - better tab functionality             | https://github.com/ema2159/centaur-tabs
+(require 'aurora-tabs)
+
 
 (provide 'aurora-custom)

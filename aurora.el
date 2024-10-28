@@ -21,8 +21,7 @@
 (require 'aurora-theme-dark)
 (require 'aurora-theme-light)
 
-(aurora-theme-set-dark)
-(call-interactively 'aurora-refresh-theme)
+(aurora-theme-set-light)
 (call-interactively 'aurora-refresh-theme)
 
 ;; Aurora package settings (mandatory)

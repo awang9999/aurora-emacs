@@ -595,6 +595,16 @@ function is a convenience wrapper used by `describe-package-1'."
     (set-face 'rst-reference                         'aurora-face-salient)
     (set-face 'rst-transition                        'aurora-face-default)))
 
+(defun aurora-theme--centaur-tabs ()
+  "Derive centaur tab faces from aurora faces"
+  (with-eval-after-load 'centaur-tabs
+    (set-face 'centaur-tabs-default 'aurora-face-tab-default)
+    (set-face 'centaur-tabs-selected 'aurora-face-tab-active)
+    (set-face 'centaur-tabs-unselected 'aurora-face-tab-inactive)
+    (set-face 'centaur-tabs-selected-modified 'aurora-face-tab-active-modified)
+    (set-face 'centaur-tabs-unselected-modified 'aurora-face-tab-inactive-modified)
+    (set-face 'centaur-tabs-active-bar-face 'aurora-face-tab-active-bar-face)))
+
 
 (defun aurora-theme--markdown ()
   "Derive markdown faces from aurora faces."
@@ -642,90 +652,6 @@ function is a convenience wrapper used by `describe-package-1'."
     (set-face 'markdown-table-face                   'aurora-face-default)
     (set-face 'markdown-url-face                     'aurora-face-salient)))
 
-
-(defun aurora-theme--ivy ()
-  "Derive ivy faces from aurora faces."
-  (with-eval-after-load 'ivy
-    (set-face 'ivy-action                              'aurora-face-faded)
-    (set-face 'ivy-completions-annotations             'aurora-face-faded)
-    (set-face 'ivy-confirm-face                        'aurora-face-faded)
-    (set-face 'ivy-current-match    '(aurora-face-strong aurora-face-subtle))
-    (set-face 'ivy-cursor                             'aurora-face-strong)
-    (set-face 'ivy-grep-info                          'aurora-face-strong)
-    (set-face 'ivy-grep-line-number                    'aurora-face-faded)
-    (set-face 'ivy-highlight-face                     'aurora-face-strong)
-    (set-face 'ivy-match-required-face                 'aurora-face-faded)
-    (set-face 'ivy-minibuffer-match-face-1             'aurora-face-faded)
-    (set-face 'ivy-minibuffer-match-face-2             'aurora-face-faded)
-    (set-face 'ivy-minibuffer-match-face-3             'aurora-face-faded)
-    (set-face 'ivy-minibuffer-match-face-4             'aurora-face-faded)
-    (set-face 'ivy-minibuffer-match-highlight         'aurora-face-strong)
-    (set-face 'ivy-modified-buffer                    'aurora-face-popout)
-    (set-face 'ivy-modified-outside-buffer            'aurora-face-strong)
-    (set-face 'ivy-org                                 'aurora-face-faded)
-    (set-face 'ivy-prompt-match                        'aurora-face-faded)
-    (set-face 'ivy-remote                            'aurora-face-default)
-    (set-face 'ivy-separator                           'aurora-face-faded)
-    (set-face 'ivy-subdir                              'aurora-face-faded)
-    (set-face 'ivy-virtual                             'aurora-face-faded)
-    (set-face 'ivy-yanked-word                         'aurora-face-faded)))
-
-(defun aurora-theme--helm ()
-  "Derive helm faces from aurora faces."
-  (with-eval-after-load 'helm
-    (set-face 'helm-selection                '(aurora-face-strong aurora-face-subtle))
-    (set-face 'helm-match                                       'aurora-face-strong)
-    (set-face 'helm-source-header                              'aurora-face-salient)
-    (set-face 'helm-visible-mark                                'aurora-face-strong)))
-
-(defun aurora-theme--helm-swoop ()
-  "Derive helm faces from aurora faces."
-  (with-eval-after-load 'helm-swoop
-    (set-face 'helm-swoop-target-line-face   '(aurora-face-strong aurora-face-subtle))))
-
-(defun aurora-theme--helm-occur ()
-  "Derive helm faces from aurora faces."
-  (with-eval-after-load 'helm-occur
-    (set-face 'helm-moccur-buffer                               'aurora-face-strong)))
-
-(defun aurora-theme--helm-ff ()
-  "Derive helm faces from aurora faces."
-  (with-eval-after-load 'helm-ff
-    (set-face 'helm-ff-file                                      'aurora-face-faded)
-    (set-face 'helm-ff-prefix                                   'aurora-face-strong)
-    (set-face 'helm-ff-dotted-directory                          'aurora-face-faded)
-    (set-face 'helm-ff-directory                                'aurora-face-strong)
-    (set-face 'helm-ff-executable                               'aurora-face-popout)))
-
-(defun aurora-theme--helm-grep ()
-  "Derive helm faces from aurora faces."
-  (with-eval-after-load 'helm-grep
-    (set-face 'helm-grep-match                                  'aurora-face-strong)
-    (set-face 'helm-grep-file                                    'aurora-face-faded)
-    (set-face 'helm-grep-lineno                                  'aurora-face-faded)
-    (set-face 'helm-grep-finish                                'aurora-face-default)))
-
-(defun aurora-theme--company ()
-  "Derive company tooltip window from aurora faces."
-  (with-eval-after-load 'company
-    (set-face 'company-tooltip-selection                   '(aurora-face-strong aurora-face-subtle))
-    (set-face-attribute 'company-tooltip-selection nil :background aurora-color-popout)
-    
-    (set-face 'company-tooltip                                               'aurora-face-subtle)
-
-    (set-face 'company-scrollbar-fg                                          'aurora-face-faded)
-    (set-face-attribute 'company-scrollbar-fg nil :background aurora-color-foreground)
-    
-    (set-face 'company-scrollbar-bg                                          'aurora-face-default)
-    (set-face-attribute 'company-scrollbar-bg nil :background aurora-color-faded)
-
-    (set-face 'company-tooltip-common                                        'aurora-face-faded)
-    (set-face 'company-tooltip-common-selection            '(aurora-face-strong aurora-face-subtle))
-    (set-face-attribute 'company-tooltip-common-selection nil :background aurora-color-popout)
-    
-    (set-face 'company-tooltip-annotation                                    'aurora-face-default)
-    (set-face 'company-tooltip-annotation-selection        '(aurora-face-strong aurora-face-subtle))))
-
 (defun aurora-theme ()
   "Derive many, many faces from the core aurora faces."
   (aurora-theme--basics)
@@ -751,15 +677,9 @@ function is a convenience wrapper used by `describe-package-1'."
   (aurora-theme--elfeed)
   (aurora-theme--deft)
   (aurora-theme--rst)
+  (aurora-theme--centaur-tabs)
   (aurora-theme--markdown)
-  (aurora-theme--ivy)
-  (aurora-theme--helm)
-  (aurora-theme--helm-swoop)
-  (aurora-theme--helm-occur)
-  (aurora-theme--helm-ff)
-  (aurora-theme--helm-grep)
-  (aurora-theme--hl-line)
-  (aurora-theme--company))
+  (aurora-theme--hl-line))
 
 (defun aurora-refresh-theme ()
   "Convenience function which refreshes the aurora-theme.

@@ -10,7 +10,7 @@
   (corfu-preselect 'prompt)      ;; Preselect the prompt
   ;; (corfu-on-exact-match nil)     ;; Configure handling of exact matches
   ;; (corfu-scroll-margin 5)        ;; Use scroll margin
-  (corfu-auto-delay 0.1)         ;; Delay before showing suggestions
+  (corfu-auto-delay 0.05)         ;; Delay before showing suggestions
   (corfu-auto-prefix 2)         ;; Number of characters before showing suggestions
   (corfu-popupinfo-delay '(0.2 . 0.1)) ;; Delay before first popup, delay before updating
 

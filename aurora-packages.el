@@ -15,7 +15,7 @@
 (package-initialize)
 
 ;; Delay loading package until it is used (improves startup time)
-(setq use-package-always-defer t)
+;; (setq use-package-always-defer t)
 
 ;; Download packages when they are not available on the system
 (require 'use-package-ensure)
