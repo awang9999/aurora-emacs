@@ -2,7 +2,7 @@
 ;; Author: Alexander Wang
 ;; Email: alexander.wang2001@gmail.com
 ;; Last updated: Oct 2024
-;; Credits: Nicholas Rougier (NANO EMACS)
+;; Credits: Nicholas Rougier (NANO EMACS), Henrik Lissner (DOOM THEMES)
 
 ;; Set Emacs dir
 (setq EMACS_DIR "~/.emacs.d/")
@@ -15,14 +15,9 @@
 
 (add-to-load-path-recursively "/home/zander/projects/aurora-emacs")
 
-;; Aurora theme
-(require 'aurora-faces)
+;; Aurora theme (mandatory)
+(require 'aurora-fonts)
 (require 'aurora-theme)
-(require 'aurora-theme-dark)
-(require 'aurora-theme-light)
-
-(aurora-theme-set-light)
-(call-interactively 'aurora-refresh-theme)
 
 ;; Aurora package settings (mandatory)
 (require 'aurora-packages)
@@ -34,7 +29,7 @@
 (require 'aurora-defaults)
 
 ;; Aurora header & mode lines (optional)
-(require 'aurora-modeline)
+;; (require 'aurora-modeline)
 
 ;; Aurora configuration (optional)
 (require 'aurora-custom)

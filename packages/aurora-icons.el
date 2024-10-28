@@ -13,9 +13,10 @@
   :after corfu
   :config
   (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter)
+  (setq kind-icon-default-style `(:padding -1 :stroke 0 :margin 0 :radius 0 :scale 0.6 :height 0.85)) ; make sure icons fit with scaled text
   :custom
-  (kind-icon-blend-background t)
-  (kind-icon-default-face 'corfu-default) ; only needed with blend-background
+  ;; (kind-icon-blend-background t)
+  ;; (kind-icon-default-face 'corfu-default) ; only needed with blend-background
   ;; Integrate nerd fonts with corfu using kind-icon mapping
   (kind-icon-use-icons nil)
   (kind-icon-mapping

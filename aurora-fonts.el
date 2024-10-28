@@ -46,4 +46,9 @@ Note: to change this after startup, call
 ;; No limit on font lock
 (setq font-lock-maximum-size nil)
 
+;; Set default font
+(set-face-attribute 'default nil
+                    :family 'aurora-font-family-monospaced
+                    :height (* 10 aurora-font-size))
+
 (provide 'aurora-fonts)
