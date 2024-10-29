@@ -21,4 +21,10 @@
   ;; function unless you use something similar
   (add-hook 'kb/themes-hooks #'(lambda () (interactive) (kind-icon-reset-cache))))
 
+  ;; Reduce icon size to make corfu completion window not be cut off
+  (custom-set-variables
+   '(kind-icon-default-style
+     '(:padding 0 :stroke 0 :margin 0 :radius 0 :height 0.6 :scale 1.0))
+   '(package-selected-packages '(kind-icon corfu)))
+
 (provide 'aurora-icons)
