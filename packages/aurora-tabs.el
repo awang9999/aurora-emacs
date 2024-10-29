@@ -3,7 +3,7 @@
   (setq centaur-tabs-style "slant"
         centaur-tabs-height 32
         centaur-tabs-set-icons t
-        centaur-tabs-icon-type 'nerd-icons
+        centaur-tabs-icon-type 'all-the-icons
         centaur-tabs-show-new-tab-button t
         centaur-tabs-set-modified-marker t
         centaur-tabs-show-navigation-buttons t
@@ -14,7 +14,7 @@
         ;; centaur-tabs-plain-icons t
         x-underline-at-descent-line t
         centaur-tabs-left-edge-margin nil)
-  (centaur-tabs-change-fonts (face-attribute 'default :family) (* 10 aurora-font-size))
+  (centaur-tabs-change-fonts (face-attribute 'default :family) aurora-font-size)
   (centaur-tabs-headline-match)
   ;; (centaur-tabs-enable-buffer-alphabetical-reordering)
   ;; (setq centaur-tabs-adjust-buffer-order t)

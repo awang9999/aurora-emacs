@@ -13,7 +13,7 @@ Defaults to nil."
   :group 'aurora
   :type 'string)
 
-(defcustom aurora-font-size 18
+(defcustom aurora-font-size 200
   "Default value for the font size of aurora-theme in pt units.
 Note: to change this after startup, call
 \(aurora-faces\) and \(aurora-themes\)."
@@ -49,6 +49,6 @@ Note: to change this after startup, call
 ;; Set default font
 (set-face-attribute 'default nil
                     :family 'aurora-font-family-monospaced
-                    :height (* 10 aurora-font-size))
+                    :height aurora-font-size)
 
 (provide 'aurora-fonts)
