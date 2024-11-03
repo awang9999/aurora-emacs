@@ -9,6 +9,7 @@
         centaur-tabs-show-navigation-buttons t
         centaur-tabs-set-bar 'under
         centaur-tabs-show-count nil
+        centaur-tabs-icon-scale-factor 0.8
         ;; centaur-tabs-label-fixed-length 15
         ;; centaur-tabs-gray-out-icons 'buffer
         ;; centaur-tabs-plain-icons t

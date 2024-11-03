@@ -4,6 +4,9 @@
 ;; Last updated: Oct 2024
 ;; Credits: Nicholas Rougier (NANO EMACS), Henrik Lissner (DOOM THEMES)
 
+;; Defer garbage collection further back in the startup process
+(setq gc-cons-threshold most-positive-fixnum)
+
 ;; Set Emacs dir
 (setq EMACS_DIR "~/.emacs.d/")
 
