@@ -33,6 +33,8 @@
   (global-corfu-mode)
   (corfu-history-mode)
   (corfu-popupinfo-mode) ; Popup completion info
+  :config
+  (setq corfu-min-width 25)
   )
 
 ;; A few more useful configurations...

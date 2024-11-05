@@ -26,5 +26,8 @@
 ;; Centaur Tabs - better tab functionality             | https://github.com/ema2159/centaur-tabs
 (require 'aurora-tabs)
 
+(require 'aurora-terminal)
+(require 'aurora-dashboard)
+
 
 (provide 'aurora-custom)

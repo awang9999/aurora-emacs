@@ -3,13 +3,12 @@
   (setq centaur-tabs-style "slant"
         centaur-tabs-height 32
         centaur-tabs-set-icons t
-        centaur-tabs-icon-type 'all-the-icons
+        centaur-tabs-icon-type 'nerd-icons
         centaur-tabs-show-new-tab-button t
         centaur-tabs-set-modified-marker t
         centaur-tabs-show-navigation-buttons t
         centaur-tabs-set-bar 'under
         centaur-tabs-show-count nil
-        centaur-tabs-icon-scale-factor 0.8
         ;; centaur-tabs-label-fixed-length 15
         ;; centaur-tabs-gray-out-icons 'buffer
         ;; centaur-tabs-plain-icons t
@@ -66,6 +65,7 @@ Other buffer group by `centaur-tabs-get-group-name' with project name."
   (term-mode . centaur-tabs-local-mode)
   (calendar-mode . centaur-tabs-local-mode)
   (org-agenda-mode . centaur-tabs-local-mode)
+  (magit-mode . centaur-tabs-local-mode)
   :bind
   ("C-S-<iso-lefttab>" . centaur-tabs-backward)
   ("C-<tab>" . centaur-tabs-forward)
