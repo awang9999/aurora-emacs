@@ -15,7 +15,7 @@
   "Add DIR and all its subdirectories to 'load-path'."
   (let ((default-directory (file-name-as-directory dir)))
     (normal-top-level-add-subdirs-to-load-path)))
-(add-to-load-path-recursively "/home/zander/projects/aurora-emacs")
+(add-to-load-path-recursively aurora-path)
 
 ;; Aurora theme (mandatory)
 (require 'aurora-fonts)
