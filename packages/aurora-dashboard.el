@@ -20,6 +20,8 @@
   ;; set what widgets show up
   (setq dashboard-items '((recents   . 5)
                           (projects  . 5)))
+  ;; set the footer text
+  (setq dashboard-footer-messages '("GNU Emacs / Λ U R O R Λ"))
   (dashboard-setup-startup-hook))
 
 

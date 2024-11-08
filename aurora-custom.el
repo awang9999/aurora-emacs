@@ -26,8 +26,14 @@
 ;; Centaur Tabs - better tab functionality             | https://github.com/ema2159/centaur-tabs
 (require 'aurora-tabs)
 
+;; Vterm
 (require 'aurora-terminal)
+
+;; emacs-dashboard
 (require 'aurora-dashboard)
+
+;; doom-modeline
+(require 'aurora-modeline)
 
 
 (provide 'aurora-custom)
