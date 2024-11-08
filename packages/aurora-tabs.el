@@ -68,6 +68,7 @@ Other buffer group by `centaur-tabs-get-group-name' with project name."
   (magit-mode . centaur-tabs-local-mode)
   :bind
   ("C-S-<iso-lefttab>" . centaur-tabs-backward)
+  ("C-S-<tab>" . centaur-tabs-backward)
   ("C-<tab>" . centaur-tabs-forward)
   ("C-x t f" . centaur-tabs-move-current-tab-to-left)
   ("C-x t n" . centaur-tabs-move-current-tab-to-right))

@@ -35,5 +35,11 @@
 ;; doom-modeline
 (require 'aurora-modeline)
 
+;; Undo tree
+(require 'aurora-undo)
+
+;; language major modes and eglot
+(require 'aurora-languages)
+
 
 (provide 'aurora-custom)
