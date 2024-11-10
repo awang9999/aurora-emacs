@@ -22,6 +22,27 @@
                           (projects  . 5)))
   ;; set the footer text
   (setq dashboard-footer-messages '("GNU Emacs / Λ U R O R Λ"))
+
+  ;; set dashboard shortcut format
+  (setq dashboard-heading-shorcut-format " [%s]")
+
+  ;; set dashboard path style
+  (setq dashboard-path-style 'truncate-middle)
+  (setq dashboard-path-max-length 70)
+
+  ;; set order of widgets
+  (setq dashboard-startupify-list '(dashboard-insert-banner
+                                  dashboard-insert-newline
+                                  dashboard-insert-banner-title
+                                  dashboard-insert-navigator
+                                  dashboard-insert-newline
+                                  dashboard-insert-items
+                                  dashboard-insert-newline
+                                  dashboard-insert-footer
+                                  dashboard-insert-newline
+                                  dashboard-insert-init-info
+))
+  
   (dashboard-setup-startup-hook))
 
 

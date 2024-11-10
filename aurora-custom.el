@@ -41,5 +41,7 @@
 ;; language major modes and eglot
 (require 'aurora-languages)
 
+;; Treemacs!
+(require 'aurora-treemacs)
 
 (provide 'aurora-custom)

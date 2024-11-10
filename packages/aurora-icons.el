@@ -1,4 +1,5 @@
 (use-package nerd-icons)
+(use-package all-the-icons)
 
 (use-package kind-icon
   :after corfu

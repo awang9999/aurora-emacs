@@ -1,6 +1,6 @@
 (use-package centaur-tabs
   :config
-  (setq centaur-tabs-style "slant"
+  (setq centaur-tabs-style "rounded"
         centaur-tabs-height 32
         centaur-tabs-set-icons t
         centaur-tabs-icon-type 'nerd-icons
@@ -9,7 +9,7 @@
         centaur-tabs-show-navigation-buttons t
         centaur-tabs-set-bar 'under
         centaur-tabs-show-count nil
-        ;; centaur-tabs-label-fixed-length 15
+        centaur-tabs-label-fixed-length 15
         ;; centaur-tabs-gray-out-icons 'buffer
         ;; centaur-tabs-plain-icons t
         x-underline-at-descent-line t

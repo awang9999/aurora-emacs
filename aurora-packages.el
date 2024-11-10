@@ -32,9 +32,7 @@
   (load bootstrap-file nil 'nomessage))
 
 ;; Have use-package use straight
-(use-package straight
-  :custom
-  (straight-use-package-by-default t))
+(use-package straight)
 
 
 ;; Delay loading package until it is used (improves startup time)
