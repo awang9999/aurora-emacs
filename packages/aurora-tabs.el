@@ -30,15 +30,7 @@ Other buffer group by `centaur-tabs-get-group-name' with project name."
      (cond
       ;; ((not (eq (file-remote-p (buffer-file-name)) nil))
       ;; "Remote")
-      ((or (string-equal "*" (substring (buffer-name) 0 1))
-           (memq major-mode '(magit-process-mode
-                              magit-status-mode
-                              magit-diff-mode
-                              magit-log-mode
-                              magit-file-mode
-                              magit-blob-mode
-                              magit-blame-mode
-                              )))
+      ((string-equal "*" (substring (buffer-name) 0 1))
        "Emacs")
       ((derived-mode-p 'prog-mode)
        "Editing")
@@ -47,6 +39,15 @@ Other buffer group by `centaur-tabs-get-group-name' with project name."
       ((memq major-mode '(helpful-mode
                           help-mode))
        "Help")
+      ((memq major-mode '(magit-process-mode
+                              magit-status-mode
+                              magit-diff-mode
+                              magit-log-mode
+                              magit-file-mode
+                              magit-blob-mode
+                              magit-blame-mode
+                              ))
+       "Magit")
       ((memq major-mode '(org-mode
                           org-agenda-clockreport-mode
                           org-src-mode

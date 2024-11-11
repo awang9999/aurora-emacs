@@ -20,7 +20,7 @@
 ;; Magit - it's magitcal!                              | https://github.com/magit/magit
 (require 'aurora-magit)
 
-;; Nerd Icons and Kind Icon                            | look it up
+;; Nerd/all-the icons and Kind Icon                    | look it up
 (require 'aurora-icons)
 
 ;; Centaur Tabs - better tab functionality             | https://github.com/ema2159/centaur-tabs
@@ -43,5 +43,8 @@
 
 ;; Treemacs!
 (require 'aurora-treemacs)
+
+;; Org mode configuration
+(require 'aurora-org)
 
 (provide 'aurora-custom)

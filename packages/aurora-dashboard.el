@@ -34,13 +34,12 @@
   (setq dashboard-startupify-list '(dashboard-insert-banner
                                   dashboard-insert-newline
                                   dashboard-insert-banner-title
-                                  dashboard-insert-navigator
+                                  dashboard-insert-init-info
+                                  ;; dashboard-insert-navigator
                                   dashboard-insert-newline
                                   dashboard-insert-items
                                   dashboard-insert-newline
                                   dashboard-insert-footer
-                                  dashboard-insert-newline
-                                  dashboard-insert-init-info
 ))
   
   (dashboard-setup-startup-hook))
