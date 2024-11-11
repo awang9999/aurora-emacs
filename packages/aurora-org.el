@@ -1,3 +1,5 @@
+(use-package org)
+
 ;; Improve org mode looks
 (setq-default org-startup-indented t
               org-pretty-entities t

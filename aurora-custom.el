@@ -47,4 +47,7 @@
 ;; Org mode configuration
 (require 'aurora-org)
 
+;; Org-roam configuration
+(require 'aurora-org-roam)
+
 (provide 'aurora-custom)
