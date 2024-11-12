@@ -1,4 +1,12 @@
-(use-package org)
+(defun my-org-confirm-babel-evaluate (lang body)
+  (not (member lang '("python" "C" "sh" "emacs-lisp" "shell"))))
+
+(use-package org
+  :config
+  (org-babel-do-load-languages
+   'org-babel-load-languages '((python . t)
+                               (shell . t)))
+  (setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate))
 
 ;; Improve org mode looks
 (setq-default org-startup-indented t
