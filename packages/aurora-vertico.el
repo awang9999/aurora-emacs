@@ -22,6 +22,7 @@ The structure of INFO can be found in docstring of
   (setq vertico-posframe-parameters
       '((left-fringe . 4)
         (right-fringe . 4)))
-  (setq vertico-posframe-poshandler 'posframe-poshandler-frame-top-center-offset))
+  (setq vertico-posframe-poshandler
+        'posframe-poshandler-frame-top-center-offset))
 
 (provide 'aurora-vertico)

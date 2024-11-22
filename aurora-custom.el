@@ -50,4 +50,7 @@
 ;; Org-roam configuration
 (require 'aurora-org-roam)
 
+;; Fringe configuration
+(require 'aurora-fringe)
+
 (provide 'aurora-custom)

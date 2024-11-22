@@ -13,7 +13,7 @@
           treemacs-eldoc-display                   'simple
           treemacs-file-event-delay                2000
           treemacs-file-extension-regex            treemacs-last-period-regex-value
-          treemacs-file-follow-delay               0.2
+          treemacs-file-follow-delay               0.1
           treemacs-file-name-transformer           #'identity
           treemacs-follow-after-init               t
           treemacs-expand-after-init               t
@@ -50,7 +50,7 @@
           treemacs-select-when-already-in-treemacs 'move-back
           treemacs-space-between-root-nodes        nil
           treemacs-tag-follow-cleanup              t
-          treemacs-tag-follow-delay                1.5
+          treemacs-tag-follow-delay                0.5
           treemacs-text-scale                      nil
           treemacs-user-mode-line-format           nil
           treemacs-user-header-line-format         nil
@@ -65,6 +65,7 @@
     ;;(treemacs-resize-icons 44)
 
     (treemacs-follow-mode t)
+    (treemacs-project-follow-mode t)
     (treemacs-filewatch-mode t)
     (treemacs-fringe-indicator-mode 'always)
     (when treemacs-python-executable
@@ -114,6 +115,6 @@
 ;;  :ensure t
 ;;  :config (treemacs-set-scope-type 'Tabs))
 
-;; (treemacs-start-on-boot)
+(treemacs-start-on-boot)
 
 (provide 'aurora-treemacs)

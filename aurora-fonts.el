@@ -1,4 +1,4 @@
-(defcustom aurora-font-family-monospaced "FiraCode"
+(defcustom aurora-font-family-monospaced "Fira Code"
   "Name of the font-family to use for aurora.
 Defaults to Fira Code. Customizing this might lead to conflicts
 if the family does not have sufficient bold/light etc faces."
@@ -48,7 +48,7 @@ Note: to change this after startup, call
 
 ;; Set default font
 (set-face-attribute 'default nil
-                    :family 'aurora-font-family-monospaced
+                    :family aurora-font-family-monospaced
                     :height aurora-font-size)
 
 (provide 'aurora-fonts)
