@@ -30,9 +30,6 @@
 ;; Aurora default settings (optional)
 (require 'aurora-defaults)
 
-;; Aurora header & mode lines (optional)
-;; (require 'aurora-modeline)
-
 ;; Aurora configuration (optional)
 (require 'aurora-custom)
 

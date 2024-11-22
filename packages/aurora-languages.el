@@ -1,14 +1,12 @@
 ;; Language major modes
 
 ;; Markdown
-(use-package markdown-mode
-  :ensure t)
+(use-package markdown-mode)
 (add-to-list 'auto-mode-alist
              '("\\.\\(?:md\\|markdown\\|mkd\\|mdown\\|mkdn\\|mdwn\\)\\'" . markdown-mode))
 
 ;; Web mode
 (use-package web-mode
-  :ensure t
   :mode
   (("\\.phtml\\'" . web-mode)
    ("\\.php\\'" . web-mode)
@@ -22,7 +20,6 @@
 
 ;; Kotlin
 (use-package kotlin-mode
-  :ensure t
   :mode
   (("\\.kt\\'" . kotlin-mode)))
 

@@ -13,7 +13,7 @@
    #b11111111
    #b11111111] nil nil 'bottom)
   (set-face-foreground 'git-gutter-fr:added "pale green")
-  (set-face-foreground 'git-gutter-fr:modified "light coral")
+  (set-face-foreground 'git-gutter-fr:modified "goldenrod")
   (set-face-foreground 'git-gutter-fr:deleted "slate gray"))
 
 (provide 'aurora-fringe)
