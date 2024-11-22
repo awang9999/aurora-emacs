@@ -13,6 +13,12 @@ Defaults to nil."
   :group 'aurora
   :type 'string)
 
+(defcustom aurora-font-size-small 160
+  "Default value for the font size of aurora-theme in pt units for smaller text
+like in a file browser"
+  :group 'aurora
+  :type 'integer)
+
 (defcustom aurora-font-size 200
   "Default value for the font size of aurora-theme in pt units.
 Note: to change this after startup, call
