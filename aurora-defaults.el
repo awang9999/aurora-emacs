@@ -94,8 +94,11 @@
 ;; No tabs
 (setq-default indent-tabs-mode nil)
 
-;; Tab.space equivalence
+;; Tab space equivalence
 (setq-default tab-width 4)
+
+;; Have the indent line function insert tabs
+(setq indent-line-function 'insert-tab)
 
 ;; Size of temporary buffers
 (temp-buffer-resize-mode)

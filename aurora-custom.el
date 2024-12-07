@@ -53,4 +53,7 @@
 ;; Fringe configuration
 (require 'aurora-fringe)
 
+;; Snippets configuration
+(require 'aurora-snippets)
+
 (provide 'aurora-custom)
