@@ -14,11 +14,6 @@
   (corfu-auto-prefix 2)         ;; Number of characters before showing suggestions
   (corfu-popupinfo-delay '(0.1 . 0.1)) ;; Delay before first popup, delay before updating
 
-  ;; Enable Corfu only for certain modes. See also `global-corfu-modes'.
-  ;; :hook ((prog-mode . corfu-mode)
-  ;;        (shell-mode . corfu-mode)
-  ;;        (eshell-mode . corfu-mode))
-
   ;; Recommended: Enable Corfu globally.  This is recommended since Dabbrev can
   ;; be used globally (M-/).  See also the customization variable
   ;; `global-corfu-modes' to exclude certain modes.
@@ -60,28 +55,21 @@
 (use-package cape
   ;; Bind prefix keymap providing all Cape commands under a mnemonic key.
   ;; Press C-c p ? to for help.
-  :bind ("C-c p" . cape-prefix-map) ;; Alternative keys: M-p, M-+, ...
-  ;; Alternatively bind Cape commands individually.
-  ;; :bind (("C-c p d" . cape-dabbrev)
-  ;;        ("C-c p h" . cape-history)
-  ;;        ("C-c p f" . cape-file)
-  ;;        ...)
+  :bind ("C-c p" . cape-prefix-map)
   :init
+  ;; Define my super capf function
+  (defalias 'aurora/cape-all
+      (cape-capf-super #'cape-abbrev #'cape-history #'cape-dabbrev #'cape-dict))
   ;; Add to the global default value of `completion-at-point-functions' which is
-  ;; used by `completion-at-point'.  The order of the functions matters, the
+  ;; used by `completion-at-point'. The order of the functions matters, the
   ;; first function returning a result wins.  Note that the list of buffer-local
-  ;; completion functions takes precedence over the global list.
-  (add-hook 'completion-at-point-functions #'cape-dabbrev)
+  ;; completion functions takes precedence over the global list.    
   (add-hook 'completion-at-point-functions #'cape-file)
-  (add-hook 'completion-at-point-functions #'cape-elisp-block)
+  (add-hook 'completion-at-point-functions #'aurora/cape-all)
+  ;; (add-hook 'completion-at-point-functions #'cape-elisp-block)
   ;; (add-hook 'completion-at-point-functions #'cape-history)
-  ;; ...
-  )
-
-;; eglot integration https://github.com/minad/corfu/wiki#configuring-corfu-for-eglot
-
-;; Enable cache busting, depending on if your server returns
-;; sufficiently many candidates in the first place.
-(advice-add 'eglot-completion-at-point :around #'cape-wrap-buster)
+  ;; ..
+  :config
+  (advice-add 'eglot-completion-at-point :around #'cape-wrap-buster))
 
 (provide 'aurora-corfu)

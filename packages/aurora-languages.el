@@ -30,7 +30,20 @@
   :defer t
   :hook ((java-mode . eglot-ensure)
          (typescript-mode . eglot-ensure)
-         (kotlin-mode . eglot-ensure)))
+         (kotlin-mode . eglot-ensure)
+         (c-mode . eglot-ensure)
+         (c++-mode . eglot-ensure)
+         (python-mode . eglot-ensure)
+         (LaTeX-mode . eglot-ensure))
+  :config
+  (add-to-list 'eglot-server-programs '(c-mode . ("clangd")))
+  (add-to-list 'eglot-server-programs '(c++-mode . ("clangd")))
+  (add-to-list 'eglot-server-programs '(python-mode . ("pyls")))
+  (add-to-list 'eglot-server-programs '(LaTeX-mode . ("digestif")))
+  ;; format on save
+  (add-hook 'c-mode-hook '(lambda() (add-hook 'before-save-hook 'eglot-format-buffer nil t)))
+  (add-hook 'c++-mode-hook '(lambda() (add-hook 'before-save-hook 'eglot-format-buffer nil t)))
+  (add-hook 'python-mode-hook '(lambda() (add-hook 'before-save-hook 'eglot-format-buffer nil t))))
 
 ;; Tree-sitter
 (use-package treesit-auto

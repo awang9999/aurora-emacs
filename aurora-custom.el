@@ -4,6 +4,12 @@
 ;; These custom packages are loaded after the theme so for theme-related
 ;; configurations, please load them at the right level.
 
+;; Org mode configuration
+(require 'aurora-org)
+
+;; Org-roam configuration
+(require 'aurora-org-roam)
+
 ;; Consult provides search and navigation commands     | https://github.com/minad/consult
 (require 'aurora-consult)
 ;; Vertico minibuffer completion                       | https://github.com/minad/vertico
@@ -20,6 +26,18 @@
 ;; Magit - it's magitcal!                              | https://github.com/magit/magit
 (require 'aurora-magit)
 
+;; Fringe configuration
+(require 'aurora-fringe)
+
+;; Undo tree
+(require 'aurora-undo)
+
+;; language major modes and eglot
+(require 'aurora-languages)
+
+;; Snippets configuration
+(require 'aurora-snippets)
+
 ;; Nerd/all-the icons and Kind Icon                    | look it up
 (require 'aurora-icons)
 
@@ -35,25 +53,7 @@
 ;; doom-modeline
 (require 'aurora-modeline)
 
-;; Undo tree
-(require 'aurora-undo)
-
-;; language major modes and eglot
-(require 'aurora-languages)
-
 ;; Treemacs!
 (require 'aurora-treemacs)
-
-;; Org mode configuration
-(require 'aurora-org)
-
-;; Org-roam configuration
-(require 'aurora-org-roam)
-
-;; Fringe configuration
-(require 'aurora-fringe)
-
-;; Snippets configuration
-(require 'aurora-snippets)
 
 (provide 'aurora-custom)
